@@ -11,7 +11,7 @@ exports.getAllProducts = async (req, res) => {
     const product = await Cat.find({});
     res.render("products_index", { products: product }); 
   } catch (err) {
-    res.status(500).send(" Failed to fetch products");
+    res.status(500).send(" Failed m to fetch products");
   }
 };
 
