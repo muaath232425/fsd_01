@@ -1,0 +1,12 @@
+<h1>Loan</h1>
+<h3>User's Name: <%= user.name %></h3>
+
+<p>
+    <% if (user.age < 18) { %>
+        <h3>This user is a Small Boy: <%= user.age %></h3>
+    <% } else if (user.age > 18 && user.age < 25) { %>
+        <h3>This user is a Big Boy: <%= user.age %></h3>
+    <% } else { %>
+        <h3>This user is an Adult: <%= user.age %></h3>
+    <% } %>
+</p>
