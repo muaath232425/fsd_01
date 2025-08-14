@@ -1,26 +1,27 @@
+//  most need
+
 const express = require("express");
 const router = express.Router();
 
+// controller
 const { getAllProducts } = require("../controllers/productController");
 
 const { addProduct } = require("../controllers/productController");
-
-const { addpage } = require("../controllers/productController");
 
 const { updateProduct } = require("../controllers/productController");
 
 const { deleteProduct } = require("../controllers/productController");
 
 
+// get / limit / search / more
+router.get("/", getAllProducts); 
 
-router.get("/", getAllProducts); // controller logic to get all
+// add new
+router.post("/", addProduct);
 
-router.post("/", addProduct); // controller logic to add
+router.put("/update/:id", updateProduct); // controller logic to update
 
-router.get("/add", addpage); // controller logic to add page
+router.delete("/delete/:id", deleteProduct); // controller logic to delete
 
-router.post("/update/:id", updateProduct); // controller logic to update
-router.post("/delete/:id", deleteProduct); // controller logic to delete
-
-
+// export router
 module.exports = router;

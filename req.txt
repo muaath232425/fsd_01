@@ -1,0 +1,46 @@
+// add new
+http://localhost:8085/products
+
+POST
+{
+  "name": "Laptop",
+  "sku": "LP1001",
+  "price": 1200,
+  "instock": true,
+  "quantity": 10,
+  "category": "Electronics",
+  "releaseDate": "2025-08-14",
+  "description": "High performance laptop",
+  "rating": 4.5
+}
+
+
+
+
+
+// get
+
+http://localhost:8085/products?search=phone&limit=5&page=1
+
+http://localhost:8085/products?limit=5
+
+
+
+
+
+
+
+// update
+http://localhost:8085/products/update/689d830fa1350723a0b77e69
+// PUT
+{
+  "name": "Updated Laptop",
+  "price": 1300,
+  "quantity": 8
+}
+
+
+
+
+//DELETE
+http://localhost:8085/products/delete/689d830fa1350723a0b77e69
